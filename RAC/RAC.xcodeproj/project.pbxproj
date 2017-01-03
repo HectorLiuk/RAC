@@ -13,9 +13,11 @@
 		C403055A1E1B4169006C2247 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C40305581E1B4169006C2247 /* Main.storyboard */; };
 		C403055C1E1B4169006C2247 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C403055B1E1B4169006C2247 /* Assets.xcassets */; };
 		C403055F1E1B4169006C2247 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C403055D1E1B4169006C2247 /* LaunchScreen.storyboard */; };
+		DBED38DE00480D2F211291CC /* Pods_RAC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7DF433F87D5B4070423CA7F /* Pods_RAC.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B7DF433F87D5B4070423CA7F /* Pods_RAC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RAC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C403054C1E1B4168006C2247 /* RAC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RAC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C40305501E1B4168006C2247 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C40305521E1B4168006C2247 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -26,6 +28,8 @@
 		C403055B1E1B4169006C2247 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C403055E1E1B4169006C2247 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C40305601E1B4169006C2247 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC7A936D119D6F0539B78A2A /* Pods-RAC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RAC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RAC/Pods-RAC.debug.xcconfig"; sourceTree = "<group>"; };
+		FC91C10E396A3C49F1C8D456 /* Pods-RAC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RAC.release.xcconfig"; path = "Pods/Target Support Files/Pods-RAC/Pods-RAC.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +37,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBED38DE00480D2F211291CC /* Pods_RAC.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1FA61FDDEB5C1DF4CB210583 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B7DF433F87D5B4070423CA7F /* Pods_RAC.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C40305431E1B4168006C2247 = {
 			isa = PBXGroup;
 			children = (
 				C403054E1E1B4168006C2247 /* RAC */,
 				C403054D1E1B4168006C2247 /* Products */,
+				E12420E141C10AB10E397813 /* Pods */,
+				1FA61FDDEB5C1DF4CB210583 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,6 +94,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		E12420E141C10AB10E397813 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FC7A936D119D6F0539B78A2A /* Pods-RAC.debug.xcconfig */,
+				FC91C10E396A3C49F1C8D456 /* Pods-RAC.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,9 +110,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C40305631E1B4169006C2247 /* Build configuration list for PBXNativeTarget "RAC" */;
 			buildPhases = (
+				70F51F96FCAA20ED14AC1016 /* [CP] Check Pods Manifest.lock */,
 				C40305481E1B4168006C2247 /* Sources */,
 				C40305491E1B4168006C2247 /* Frameworks */,
 				C403054A1E1B4168006C2247 /* Resources */,
+				1C33EC762E4B95B0F5B92EFC /* [CP] Embed Pods Frameworks */,
+				5F6E7908C9502678F83691BF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -144,6 +171,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1C33EC762E4B95B0F5B92EFC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RAC/Pods-RAC-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5F6E7908C9502678F83691BF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RAC/Pods-RAC-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		70F51F96FCAA20ED14AC1016 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C40305481E1B4168006C2247 /* Sources */ = {
@@ -270,6 +345,7 @@
 		};
 		C40305641E1B4169006C2247 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC7A936D119D6F0539B78A2A /* Pods-RAC.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = RAC/Info.plist;
@@ -281,6 +357,7 @@
 		};
 		C40305651E1B4169006C2247 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC91C10E396A3C49F1C8D456 /* Pods-RAC.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = RAC/Info.plist;
@@ -309,6 +386,7 @@
 				C40305651E1B4169006C2247 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

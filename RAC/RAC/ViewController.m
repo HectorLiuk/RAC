@@ -16,7 +16,26 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    [self creatSignal];
+
+}
+
+- (void)creatSignal{
+    RACSignal *signal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        [subscriber sendNext:@1];
+        
+        [subscriber sendCompleted];
+        
+        
+        return [RACDisposable disposableWithBlock:^{
+            
+        }];
+    }];
+    
+    [signal subscribeNext:^(id x) {
+        NSLog(@"接受信号%@",x);
+    }];
 }
 
 

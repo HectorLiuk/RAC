@@ -35,6 +35,7 @@
     
     [signal subscribeNext:^(id x) {
         NSLog(@"接受信号%@",x);
+        
     }];
 }
 

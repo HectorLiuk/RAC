@@ -15,6 +15,8 @@
 
 @property (nonatomic, copy) NSDictionary *dic;
 @property (nonatomic, copy) NSString *str;
+
+@property (nonatomic, strong) RACSignal *signal;
 @end
 
 @implementation ViewController
@@ -39,19 +41,17 @@
 
 }
 
-- (void)creatSignal{
-    RACSignal *signal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
-        [subscriber sendNext:self.textField.text];
-        
+- (void)creatSignal
+{
+   self.signal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        [subscriber sendNext:@"ss"];
 //        [subscriber sendCompleted];
-        
-        
         return [RACDisposable disposableWithBlock:^{
-            
+            NSLog(@"信号被销毁");
         }];
     }];
     
-    [signal subscribeNext:^(id x) {
+    [self.signal subscribeNext:^(id x) {
         NSLog(@"接受信号%@",x);
     }];
 }
